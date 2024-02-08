@@ -214,6 +214,7 @@ csx/
 ecf/
 rcf/
 
+src/Infrastructure/Persistence/Migrations
 # Windows Store app package directories and files
 AppPackages/
 BundleArtifacts/
