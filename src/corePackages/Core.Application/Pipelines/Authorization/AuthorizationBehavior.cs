@@ -46,4 +46,3 @@ public class AuthorizationBehavior<TRequest, TResponse> : IPipelineBehavior<TReq
         TResponse response = await next();
         return response;
     }
-}
