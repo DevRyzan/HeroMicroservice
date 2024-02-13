@@ -1,4 +1,5 @@
 ﻿using Core.Persistence.Repositories;
+using Domain.Abilities;
 using Domain.Enums;
 
 
@@ -17,7 +18,7 @@ public class Hero : Entity<Guid>
     public HeroDetail? HeroDetail { get; set; }
 
     public ICollection<HeroAndSkin>? HeroAndSkins { get; set; }
-    //public ICollection<Ability>? Abilities { get; set; }
+    public ICollection<Ability>? Abilities { get; set; }
     public ICollection<BardAndHero>? BardAndHeros { get; set; }
     public ICollection<HeroStory>? HeroStories { get; set; }
 
