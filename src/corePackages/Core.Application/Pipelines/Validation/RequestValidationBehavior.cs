@@ -1,6 +1,9 @@
-﻿using FluentValidation.Results;
+
+using FluentValidation.Results;
 using FluentValidation;
 using MediatR;
+using System.ComponentModel.DataAnnotations;
+using ValidationException = FluentValidation.ValidationException;
 
 
 namespace Core.Application.Pipelines.Validation;
@@ -28,3 +31,4 @@ public class RequestValidationBehavior<TRequest, TResponse> : IPipelineBehavior<
         return next();
     }
 }
+

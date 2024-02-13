@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Core.Security.Extensions;
 using Microsoft.IdentityModel.Tokens;
 
-
 namespace Core.Application.Pipelines.Authorization;
 
 public class AuthorizationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
@@ -47,4 +46,3 @@ public class AuthorizationBehavior<TRequest, TResponse> : IPipelineBehavior<TReq
         TResponse response = await next();
         return response;
     }
-}
