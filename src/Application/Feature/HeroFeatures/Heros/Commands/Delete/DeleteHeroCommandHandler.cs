@@ -29,7 +29,7 @@ public class DeleteHeroCommandHandler : IRequestHandler<DeleteHeroCommandRequest
     public async Task<DeleteHeroCommandResponse> Handle(DeleteHeroCommandRequest request, CancellationToken cancellationToken)
     {
         // Get the Hero object by its ID
-        Hero hero = await _heroService.GetById(request.Id);
+        Hero hero = await _heroService.GetById(request.DeletedHeroDto.Id);
         // Check if the Hero exists
         await _heroBusinessRules.HeroShouldBeExist(hero);
 

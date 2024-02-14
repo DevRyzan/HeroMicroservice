@@ -29,10 +29,10 @@ public class RemoveHeroCommandHandler : IRequestHandler<RemoveHeroCommandRequest
     public async Task<RemoveHeroCommandResponse> Handle(RemoveHeroCommandRequest request, CancellationToken cancellationToken)
     {
         // Check if the Hero ID exists
-        await _heroBusinessRules.HeroIdShouldBeExist(request.Id);
+        await _heroBusinessRules.HeroIdShouldBeExist(request.RemoveHeroDto.Id);
 
         // Get the Hero object by its ID
-        Hero hero = await _heroService.GetById(request.Id);
+        Hero hero = await _heroService.GetById(request.RemoveHeroDto.Id);
         // Map the properties from the request to the Hero object
         Hero mappedHero = _mapper.Map<Hero>(request);
 

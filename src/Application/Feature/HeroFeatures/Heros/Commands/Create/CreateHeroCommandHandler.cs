@@ -29,23 +29,23 @@ public class CreateHeroCommandHandler : IRequestHandler<CreateHeroCommandRequest
         RandomCodeGenerator code1 = new RandomCodeGenerator();
         RandomCodeGenerator code2 = new RandomCodeGenerator();
         // Check if the hero name already exists
-        await _heroBusinessRule.HeroNameShouldNotBeExist(request.Name);
+        await _heroBusinessRule.HeroNameShouldNotBeExist(request.CreatedHeroDto.Name);
 
         // Create a Hero object and map properties from the request
-        Hero mappedHero = _mapper.Map<Hero>(request);
+        Hero mappedHero = _mapper.Map<Hero>(request.CreatedHeroDto);
         mappedHero.Code = code1.GenerateUniqueCode();
         mappedHero.CreatedDate = DateTime.Now;
 
         // Create a HeroDetail object and populate its properties from the request
         HeroDetail createdHeroDetail = new HeroDetail()
         {
-            Description = request.Description,
-            Title = request.Title,
-            Story = request.Story,
-            IconUrl = request.IconUrl,
-            GamPrice = request.GamPrice,
-            CreditPrice = request.CreditPrice,
-            Status = request.Status,
+            Description = request.CreatedHeroDto.Description,
+            Title = request.CreatedHeroDto.Title,
+            Story = request.CreatedHeroDto.Story,
+            IconUrl = request.CreatedHeroDto.IconUrl,
+            GamPrice = request.CreatedHeroDto.GamPrice,
+            CreditPrice = request.CreatedHeroDto.CreditPrice,
+            Status = request.CreatedHeroDto.Status,
             IsDeleted = false,
             Code = code2.GenerateUniqueCode()
         };

@@ -26,10 +26,10 @@ public class UpdatedHeroCommandHandler : IRequestHandler<UpdatedHeroCommandReque
     public async Task<UpdatedHeroCommandResponse> Handle(UpdatedHeroCommandRequest request, CancellationToken cancellationToken)
     {
         // Check if the Hero ID exists
-        await _heroBusinessRule.HeroIdShouldBeExist(request.Id);
+        await _heroBusinessRule.HeroIdShouldBeExist(request.UpdateHeroDto.Id);
 
         // Check if the Hero name doesn't exist with the given ID
-        await _heroBusinessRule.HeroNameShouldNotBeExistWithId(request.Name, request.Id);
+        await _heroBusinessRule.HeroNameShouldNotBeExistWithId(request.UpdateHeroDto.Name, request.UpdateHeroDto.Id);
 
         // Map the properties from the request to a new Hero object
         Hero mappedHero = _mapper.Map<Hero>(request);
@@ -38,12 +38,12 @@ public class UpdatedHeroCommandHandler : IRequestHandler<UpdatedHeroCommandReque
         HeroDetail heroDetail = await _heroDetailService.GetHeroDetailByHeroId(mappedHero.Id);
 
         // Update HeroDetail properties with values from the request
-        heroDetail.Description = request.Description;
-        heroDetail.IconUrl = request.IconUrl;
-        heroDetail.Title = request.Title;
-        heroDetail.Story = request.Story;
-        heroDetail.GamPrice = request.GamPrice;
-        heroDetail.CreditPrice = request.CreditPrice;
+        heroDetail.Description = request.UpdateHeroDto.Description;
+        heroDetail.IconUrl = request.UpdateHeroDto.IconUrl;
+        heroDetail.Title = request.UpdateHeroDto.Title;
+        heroDetail.Story = request.UpdateHeroDto.Story;
+        heroDetail.GamPrice = request.UpdateHeroDto.GamPrice;
+        heroDetail.CreditPrice = request.UpdateHeroDto.CreditPrice;
         heroDetail.UpdatedDate = DateTime.UtcNow;
 
         // Set the CreatedDate of the mapped Hero to match the existing CreatedDate in HeroDetail
@@ -66,9 +66,9 @@ public class UpdatedHeroCommandHandler : IRequestHandler<UpdatedHeroCommandReque
         updatedHeroDto.Story = heroDetail.Story;
         updatedHeroDto.GamPrice = heroDetail.GamPrice;
         updatedHeroDto.CreditPrice = heroDetail.CreditPrice;
-        updatedHeroDto.DifficultLevel = request.DifficultLevel;
-        updatedHeroDto.IconUrl = request.IconUrl;
-        updatedHeroDto.HeroType = request.HeroType;
+        updatedHeroDto.DifficultLevel = request.UpdateHeroDto.DifficultLevel;
+        updatedHeroDto.IconUrl = request.UpdateHeroDto.IconUrl;
+        updatedHeroDto.HeroType = request.UpdateHeroDto.HeroType;
         updatedHeroDto.HeroDetailId = heroDetail.Id;
         updatedHeroDto.UpdatedDate = DateTime.UtcNow;
 

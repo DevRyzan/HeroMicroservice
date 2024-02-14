@@ -23,10 +23,10 @@ public class ChangeStatusHeroCommandHandler : IRequestHandler<ChangeStatusHeroCo
     public async Task<ChangeStatusHeroCommandResponse> Handle(ChangeStatusHeroCommandRequest request, CancellationToken cancellationToken)
     {
         // Ensure that the provided Id exists by checking against the HeroBusinessRules.
-        await _heroBusinessRules.HeroIdShouldBeExist(request.Id);
+        await _heroBusinessRules.HeroIdShouldBeExist(request.ChangeStatusHeroDto.Id);
 
         // Retrieve the Hero entity by its Id.
-        Hero hero = await _heroService.GetById(request.Id);
+        Hero hero = await _heroService.GetById(request.ChangeStatusHeroDto.Id);
 
         // Toggle the 'Status' property of the Hero entity (true to false, and vice versa).
         hero.Status = hero.Status == true ? false : true;
