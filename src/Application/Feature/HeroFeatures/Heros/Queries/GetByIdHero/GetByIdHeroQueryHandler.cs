@@ -26,7 +26,7 @@ public class GetByIdHeroQueryHandler : IRequestHandler<GetByIdHeroQueryRequest, 
     public async Task<GetByIdHeroQueryResponse> Handle(GetByIdHeroQueryRequest request, CancellationToken cancellationToken)
     {
         // Get the Hero object by its ID
-        Hero? hero = await _heroService.GetById(request.Id);
+        Hero? hero = await _heroService.GetById(request.GetByIdDto.Id);
 
         // Check if the Hero exists
         await _heroBusinessRules.HeroShouldBeExist(hero);
