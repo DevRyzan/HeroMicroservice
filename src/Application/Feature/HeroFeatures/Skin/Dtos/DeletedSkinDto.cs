@@ -2,4 +2,5 @@
 
 public class DeletedSkinDto
 {
+    public Guid Id { get; set; }
 }

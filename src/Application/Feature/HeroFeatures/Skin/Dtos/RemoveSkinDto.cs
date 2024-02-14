@@ -2,4 +2,5 @@
 
 public class RemoveSkinDto
 {
+    public Guid Id { get; set; }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Application.Feature.HeroFeatures.Skin.Dtos;
 
-public class ChangedStatusSkinDto
+public class GetByIdSkinDto
 {
     public Guid Id { get; set; }
 }
