@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Application.Feature.HeroFeatures.Skin.Dtos;
+using MediatR;
 
-namespace Application.Feature.HeroFeatures.Skin.Commands.Delete
+namespace Application.Feature.HeroFeatures.Skin.Commands.Delete;
+
+public class DeleteSkinCommandRequest : IRequest<DeleteSkinCommandResponse>
 {
-    internal class DeleteSkinCommandRequest
-    {
-    }
+    public DeletedSkinDto DeletedSkinDto { get; set; }
 }

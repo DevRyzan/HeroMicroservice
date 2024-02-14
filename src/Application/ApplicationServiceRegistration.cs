@@ -1,4 +1,8 @@
-﻿using Application.Service.HeroServices.SkinService;
+﻿using Application.Service.HeroServices.HeroAndSkinService;
+using Application.Service.HeroServices.HeroDetailService;
+using Application.Service.HeroServices.HeroService;
+using Application.Service.HeroServices.HeroStatService;
+using Application.Service.HeroServices.SkinService;
 using Core.Application;
 using Core.Application.Caching;
 using Core.Application.Generator;
@@ -41,6 +45,10 @@ public static class ApplicationServiceRegistration
 
 
         services.AddScoped<ISkinService, SkinManager>();
+        services.AddScoped<IHeroAndSkinService, HeroAndSkinManager>();
+        services.AddScoped<IHeroDetailService, HeroDetailManager>();
+        services.AddScoped<IHeroService, HeroManager>();
+        services.AddScoped<IHeroStatService, HeroStatManager>();
 
         return services;
     }
