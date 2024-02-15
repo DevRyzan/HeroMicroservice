@@ -1,7 +1,4 @@
-﻿
-
-namespace Application.Feature.HeroFeatures.Heros.Constants;
-
+﻿namespace Application.Feature.HeroFeatures.Heros.Constants;
 
 public class OperationClaims
 {
