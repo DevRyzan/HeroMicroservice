@@ -2,6 +2,7 @@
 using Application.Service.HeroServices.HeroDetailService;
 using Application.Service.HeroServices.HeroService;
 using Application.Service.HeroServices.HeroStatService;
+using Application.Service.HeroServices.HeroStoryService;
 using Application.Service.HeroServices.SkinService;
 using Core.Application;
 using Core.Application.Caching;
@@ -49,6 +50,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IHeroDetailService, HeroDetailManager>();
         services.AddScoped<IHeroService, HeroManager>();
         services.AddScoped<IHeroStatService, HeroStatManager>();
+        services.AddScoped<IHeroStoryService, HeroStoryManager>();
 
         return services;
     }
