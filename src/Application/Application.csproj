@@ -21,4 +21,10 @@
 	  <PackageReference Include="MediatR" Version="12.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Feature\HeroFeatures\HeroStats\Models\" />
+    <Folder Include="Feature\HeroFeatures\HeroStats\Queries\" />
+    <Folder Include="Feature\HeroFeatures\HeroStats\Profiles\" />
+  </ItemGroup>
+
 </Project>
