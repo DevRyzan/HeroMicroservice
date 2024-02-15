@@ -22,9 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Feature\HeroFeatures\HeroStats\Models\" />
     <Folder Include="Feature\HeroFeatures\HeroStats\Queries\" />
-    <Folder Include="Feature\HeroFeatures\HeroStats\Profiles\" />
   </ItemGroup>
 
 </Project>
