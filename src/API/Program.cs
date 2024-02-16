@@ -1,3 +1,4 @@
+using API.Extensions;
 using Application;
 using Persistence;
 
@@ -14,8 +15,12 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddApplicationServices();
 
 
+
+
+
 var app = builder.Build();
 
+app.ConfigureExceptionHandler<Program>(app.Services.GetRequiredService<ILogger<Program>>());
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
