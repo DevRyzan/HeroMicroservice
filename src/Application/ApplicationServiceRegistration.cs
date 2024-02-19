@@ -1,4 +1,5 @@
-﻿using Application.Service.HeroServices.HeroAndSkinService;
+﻿using Application.Service.HeroServices.BardAndHeroService;
+using Application.Service.HeroServices.HeroAndSkinService;
 using Application.Service.HeroServices.HeroDetailService;
 using Application.Service.HeroServices.HeroService;
 using Application.Service.HeroServices.HeroStatService;
@@ -51,6 +52,7 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IHeroService, HeroManager>();
         services.AddScoped<IHeroStatService, HeroStatManager>();
         services.AddScoped<IHeroStoryService, HeroStoryManager>();
+        services.AddScoped<IBardAndHeroService, BardAndHeroManager>();
 
         return services;
     }

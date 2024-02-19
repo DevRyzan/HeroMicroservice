@@ -36,7 +36,7 @@ public class MappingProfiles : Profile
         CreateMap<HeroStat, HeroStatListDto>().ReverseMap();
 
         CreateMap<HeroStat, GetListByInActiveHeroStatQueryResponse>().ReverseMap();
-        CreateMap<List<HeroStat>, List<GetListByInActiveHeroStatQueryResponse>>().ReverseMap();
+
 
 
 
