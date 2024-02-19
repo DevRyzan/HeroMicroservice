@@ -5,6 +5,7 @@ using Application.Feature.HeroFeatures.HeroStats.Commands.Remove;
 using Application.Feature.HeroFeatures.HeroStats.Commands.Update;
 using Application.Feature.HeroFeatures.HeroStats.Dtos;
 using Application.Feature.HeroFeatures.HeroStats.Models;
+using Application.Feature.HeroFeatures.HeroStats.Queries.GetListByInActive;
 using AutoMapper;
 using Domain.Entities.Heros;
 
@@ -31,7 +32,14 @@ public class MappingProfiles : Profile
         CreateMap<HeroStat, ChangeStatusHeroStatDto>().ReverseMap();
         CreateMap<HeroStat, ChangeStatusHeroStatCommandResponse>().ReverseMap();
 
-        CreateMap<HeroStat, HeroStatListDto>().ReverseMap();
         CreateMap<IList<HeroStat>, HeroStatListModel>().ReverseMap();
+        CreateMap<HeroStat, HeroStatListDto>().ReverseMap();
+
+        CreateMap<HeroStat, GetListByInActiveHeroStatQueryResponse>().ReverseMap();
+        CreateMap<List<HeroStat>, List<GetListByInActiveHeroStatQueryResponse>>().ReverseMap();
+
+
+
+
     }
 }

@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Feature\HeroFeatures\HeroStats\Queries\GetListAll\**" />
+    <EmbeddedResource Remove="Feature\HeroFeatures\HeroStats\Queries\GetListAll\**" />
+    <None Remove="Feature\HeroFeatures\HeroStats\Queries\GetListAll\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\corePackages\Core.Application\Core.Application.csproj" />
     <ProjectReference Include="..\corePackages\Core.Persistence\Core.Persistence.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
@@ -19,10 +25,6 @@
     <PackageReference Include="MediatR" Version="12.0.1" />
 	  <PackageReference Include="AutoMapper" Version="12.0.1" />
 	  <PackageReference Include="MediatR" Version="12.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Feature\HeroFeatures\HeroStats\Queries\" />
   </ItemGroup>
 
 </Project>
