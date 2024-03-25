@@ -6,6 +6,6 @@ using Domain.Entities.Heros;
 
 namespace Application.Service.Repositories;
 
-public interface IHeroRepository : IReadRepository<Hero, Guid>, IWriteRepository<Hero, Guid>
+public interface IHeroRepository : IReadRepository<Hero, string>, IWriteRepository<Hero, string>
 {
 }
