@@ -1,10 +1,6 @@
 ﻿using Core.Persistence.Repositories;
-using Domain.Abilities;
 using Domain.Entities.Abilities;
 using Domain.Entities.Items;
-using Domain.Enums;
-using System.Data;
-using ThirdParty.Json.LitJson;
 
 
 namespace Domain.Entities.Heros;
@@ -83,8 +79,16 @@ public class Hero : Entity<string>
     public string Name { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
-    public Dictionary<string, Role> Roles { get; set; }
-    public Stat Stats { get; set; }
-    public AbilityCategory Abilities { get; set; }
-    public Dictionary<string, ItemSet> ItemSets { get; set; }
+    public List<Role> Role { get; set; }
+    public int HealthPoint { get; set; }
+    public double HealthRegeneration { get; set; }
+    public int ManaPoint { get; set; }
+    public double ManaRegeneration { get; set; }
+    public int MoveSpeed { get; set; }
+    public double AttackTime { get; set; }
+    public double CriticalChance { get; set; }
+    public double CriticalDamageMod { get; set; }
+    public double EvadeChance { get; set; }
+    public List<Ability> Ability { get; set; }
+    public List<ItemSet> ItemSet { get; set; }
 }
