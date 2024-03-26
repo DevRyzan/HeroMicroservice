@@ -3,7 +3,9 @@ using Core.Persistence.Repositories.Settings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Persistence.Context;
+using Persistence.Repositories.AbilityRepositories;
 using Persistence.Repositories.HeroRepositories;
+using Persistence.Repositories.ItemRepositories;
 
 
 namespace Persistence;
@@ -19,12 +21,12 @@ public static class PersistenceServiceRegistration
                 options.Database = configuration.GetSection(nameof(MongoDbSettings) + ":" + MongoDbSettings.DatabaseValue).Value;
             })
             .AddTransient<BaseDbContext>()
-            .AddScoped<IBardAndHeroRepository, BardAndHeroRepository>()
-            .AddScoped<IHeroAndSkinRepository, HeroAndSkinRepository>()
-            .AddScoped<IHeroDetailRepository, HeroDetailRepository>()
             .AddScoped<IHeroRepository, HeroRepository>()
-            .AddScoped<IHeroStatRepository, HeroStatRepository>()
-            .AddScoped<IHeroStoryRepository, HeroStoryRepository>()
-            .AddScoped<ISkinRepository, SkinRepository>();
+            .AddScoped<IAbilityRepository, AbilityRepository>()
+            .AddScoped<IEffectRepository, EffectRepository>()
+            .AddScoped<IItemSetRepository, ItemSetRepository>()
+            .AddScoped<IRoleRepository, RoleRepository>()
+            .AddScoped<ISetBonusRepository, SetBonusRepository>()
+            .AddScoped<IUniqueItemRepository, UniqueItemRepository>();
     }
 }
