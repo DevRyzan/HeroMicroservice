@@ -6,8 +6,6 @@ using Application.Feature.HeroFeatures.Heros.Commands.Update;
 using Application.Feature.HeroFeatures.Heros.Dtos;
 using Application.Feature.HeroFeatures.Heros.Models;
 using Application.Feature.HeroFeatures.Heros.Queries.GetByIdHero;
-using Application.Feature.HeroFeatures.Heros.Queries.GetByIdHeroAndHeroStat;
-using Application.Feature.HeroFeatures.Skin.Dtos;
 using AutoMapper;
 using Core.Persistence.Paging;
 using Domain.Entities.Heros;
@@ -31,8 +29,6 @@ public class MappingProfiles : Profile
         CreateMap<Hero, UpdatedHeroCommandResponse>().ReverseMap();
 
         CreateMap<Hero, GetByIdHeroQueryResponse>().ReverseMap();
-
-        CreateMap<Hero, GetByIdHeroAndHeroStatQueryResponse>().ReverseMap();
 
         CreateMap<IList<Hero>, GetListResponse<HeroListModel>>().ReverseMap();
 

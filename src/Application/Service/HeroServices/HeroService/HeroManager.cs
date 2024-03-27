@@ -33,25 +33,25 @@ public class HeroManager : IHeroService
         return await _heroRepository.UpdateAsync(hero.Id, hero);
     }
 
-    public async Task<List<Hero>> GetListByDifficultLevel(DifficultLevel difficultLevel, int index = 0, int size = 10)
-    {
-        return await _heroRepository.GetList(x => x.DifficultLevel.Equals(difficultLevel), index: index, size: size);
-    }
+    //public async Task<List<Hero>> GetListByDifficultLevel(DifficultLevel difficultLevel, int index = 0, int size = 10)
+    //{
+    //    return await _heroRepository.GetList(x => x.DifficultLevel.Equals(difficultLevel), index: index, size: size);
+    //}
 
-    public async Task<List<Hero>> GetByDifficultLevelStatusTrue(DifficultLevel difficultLevel, int index = 0, int size = 10)
-    {
-        return await _heroRepository.GetList(x => x.DifficultLevel.Equals(difficultLevel) && x.Status.Equals(true), index: index, size: size);
-    }
+    //public async Task<List<Hero>> GetByDifficultLevelStatusTrue(DifficultLevel difficultLevel, int index = 0, int size = 10)
+    //{
+    //    return await _heroRepository.GetList(x => x.DifficultLevel.Equals(difficultLevel) && x.Status.Equals(true), index: index, size: size);
+    //}
 
-    public async Task<Hero> GetByHeroType(HeroType heroType)
-    {
-        return await _heroRepository.GetAsync(x => x.HeroType.Equals(heroType));
-    }
+    //public async Task<Hero> GetByHeroType(HeroType heroType)
+    //{
+    //    return await _heroRepository.GetAsync(x => x.HeroType.Equals(heroType));
+    //}
 
-    public async Task<Hero> GetByHeroTypeStatusTrue(HeroType heroType)
-    {
-        return await _heroRepository.GetAsync(x => x.HeroType.Equals(heroType) && x.Status.Equals(true));
-    }
+    //public async Task<Hero> GetByHeroTypeStatusTrue(HeroType heroType)
+    //{
+    //    return await _heroRepository.GetAsync(x => x.HeroType.Equals(heroType) && x.Status.Equals(true));
+    //}
 
     public async Task<Hero> GetById(Guid id)
     {
@@ -87,10 +87,10 @@ public class HeroManager : IHeroService
         throw new NotImplementedException();
     }
 
-    public async Task<List<Hero>> GetListByHeroTypeAndStatusTrue(HeroType heroType, int index = 0, int size = 10)
-    {
-        return await _heroRepository.GetList(x => x.HeroType.Equals(heroType) && x.Status.Equals(true), index: index, size: size);
-    }
+    //public async Task<List<Hero>> GetListByHeroTypeAndStatusTrue(HeroType heroType, int index = 0, int size = 10)
+    //{
+    //    return await _heroRepository.GetList(x => x.HeroType.Equals(heroType) && x.Status.Equals(true), index: index, size: size);
+    //}
 
     public async Task<List<Hero>> GetListByStatus(bool status, int index = 0, int size = 10)
     {
