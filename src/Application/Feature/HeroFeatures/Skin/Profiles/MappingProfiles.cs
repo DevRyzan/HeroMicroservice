@@ -11,21 +11,21 @@ using AutoMapper;
 
 namespace Application.Feature.HeroFeatures.Skin.Profiles;
 
-public class MappingProfiles : Profile
-{
-    public MappingProfiles()
-    {
-        CreateMap<Domain.Entities.Heros.Skin, ChangeStatusSkinCommandResponse>().ReverseMap();
+//public class MappingProfiles : Profile
+//{
+//    public MappingProfiles()
+//    {
+//        CreateMap<Domain.Entities.Heros.Skin, ChangeStatusSkinCommandResponse>().ReverseMap();
 
-        CreateMap<Domain.Entities.Heros.Skin, CreatedSkinDto>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.Skin, CreateSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.Skin, CreatedSkinDto>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.Skin, CreateSkinCommandResponse>().ReverseMap();
 
-        CreateMap<Domain.Entities.Heros.Skin, DeleteSkinCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.Skin, RemoveSkinCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.Skin, UpdateSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.Skin, DeleteSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.Skin, RemoveSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.Skin, UpdateSkinCommandResponse>().ReverseMap();
 
-        CreateMap<Domain.Entities.Heros.Skin, GetByIdSkinQueryResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.Skin, GetListByActiveSkinQueryResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.Skin, GetListByInActiveSkinQueryResponse>().ReverseMap();
-    }
-}
+//        CreateMap<Domain.Entities.Heros.Skin, GetByIdSkinQueryResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.Skin, GetListByActiveSkinQueryResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.Skin, GetListByInActiveSkinQueryResponse>().ReverseMap();
+//    }
+//}

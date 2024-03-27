@@ -1,10 +1,16 @@
-﻿using Application.Service.HeroServices.BardAndHeroService;
+using Application.Service.AbilityServices.AbilityService;
+using Application.Service.AbilityServices.EffectService;
+using Application.Service.HeroServices.BardAndHeroService;
 using Application.Service.HeroServices.HeroAndSkinService;
 using Application.Service.HeroServices.HeroDetailService;
 using Application.Service.HeroServices.HeroService;
 using Application.Service.HeroServices.HeroStatService;
 using Application.Service.HeroServices.HeroStoryService;
+using Application.Service.HeroServices.RoleService;
 using Application.Service.HeroServices.SkinService;
+using Application.Service.ItemServices.ItemSetService;
+using Application.Service.ItemServices.SetBonusService;
+using Application.Service.ItemServices.UniqueItemService;
 using Core.Application;
 using Core.Application.Caching;
 using Core.Application.Generator;
@@ -46,13 +52,18 @@ public static class ApplicationServiceRegistration
         services.AddSingleton<IRandomCodeGenerator, RandomCodeGenerator>();
 
 
-        services.AddScoped<ISkinService, SkinManager>();
-        services.AddScoped<IHeroAndSkinService, HeroAndSkinManager>();
-        services.AddScoped<IHeroDetailService, HeroDetailManager>();
+        services.AddScoped<IAbilityService, AbilityManager>();
+        services.AddScoped<IEffectService, EffectManager>();
         services.AddScoped<IHeroService, HeroManager>();
+
+        services.AddScoped<IRoleService, RoleManager>();
+        services.AddScoped<IItemSetService, ItemSetManager>();
+        services.AddScoped<ISetBonusService, SetBonusManager>();
+        services.AddScoped<IUniqueItemService, UniqueItemManager>();
         services.AddScoped<IHeroStatService, HeroStatManager>();
         services.AddScoped<IHeroStoryService, HeroStoryManager>();
         services.AddScoped<IBardAndHeroService, BardAndHeroManager>();
+
 
         return services;
     }

@@ -6,11 +6,7 @@ using Application.Feature.HeroFeatures.Heros.Commands.Update;
 using Application.Feature.HeroFeatures.Heros.Dtos;
 using Application.Feature.HeroFeatures.Heros.Models;
 using Application.Feature.HeroFeatures.Heros.Queries.GetByIdHero;
-using Application.Feature.HeroFeatures.Heros.Queries.GetByIdHeroAndHeroStat;
-using Application.Feature.HeroFeatures.Heros.Queries.GetListByAbilityId;
 using Application.Feature.HeroFeatures.Heros.Queries.GetListByActive;
-using Application.Feature.HeroFeatures.Heros.Queries.GetListByDifficultLevel;
-using Application.Feature.HeroFeatures.Heros.Queries.GetListByHeroType;
 using Application.Feature.HeroFeatures.Heros.Queries.GetListByInActive;
 using Application.Feature.HeroFeatures.Heros.Queries.GetListHero;
 using Core.Application.Requests;
@@ -90,42 +86,42 @@ public class HeroController : BaseController
         return Ok(result);
     }
 
-    [HttpGet("GetByIdHeroAndStat")]
-    public async Task<IActionResult> GetByIdHeroAndStat([FromQuery] GetByIdDto getByIdDto)
-    {
-        GetByIdHeroAndHeroStatQueryRequest request = new()
-        {
-            GetByIdDto = getByIdDto
-        };
-        GetByIdHeroAndHeroStatQueryResponse result = await Mediator.Send(request);
-        return Ok(result);
-    }
+    //[HttpGet("GetByIdHeroAndStat")]
+    //public async Task<IActionResult> GetByIdHeroAndStat([FromQuery] GetByIdDto getByIdDto)
+    //{
+    //    GetByIdHeroAndHeroStatQueryRequest request = new()
+    //    {
+    //        GetByIdDto = getByIdDto
+    //    };
+    //    GetByIdHeroAndHeroStatQueryResponse result = await Mediator.Send(request);
+    //    return Ok(result);
+    //}
 
-    [HttpGet("GetListByHeroType")]
-    public async Task<IActionResult> GetListByHeroType([FromQuery] GetListByEnumTypeHeroDto<HeroType> getListByEnumTypeHeroDto)
-    {
-        GetListByHeroTypeQueryRequest request = new()
-        {
-            HeroType = getListByEnumTypeHeroDto.EnumType,
-            PageRequest = getListByEnumTypeHeroDto.PageRequest
-        };
+    //[HttpGet("GetListByHeroType")]
+    //public async Task<IActionResult> GetListByHeroType([FromQuery] GetListByEnumTypeHeroDto<HeroType> getListByEnumTypeHeroDto)
+    //{
+    //    GetListByHeroTypeQueryRequest request = new()
+    //    {
+    //        HeroType = getListByEnumTypeHeroDto.EnumType,
+    //        PageRequest = getListByEnumTypeHeroDto.PageRequest
+    //    };
 
-        GetListResponse<HeroListModel> result = await Mediator.Send(request);
-        return Ok(result);
-    }
+    //    GetListResponse<HeroListModel> result = await Mediator.Send(request);
+    //    return Ok(result);
+    //}
 
-    [HttpGet("GetListByDifficultLevel")]
-    public async Task<IActionResult> GetListByDifficultLevel([FromQuery] GetListByEnumTypeHeroDto<DifficultLevel> getListByEnumTypeHeroDto)
-    {
-        GetListByDifficultLevelQueryRequest request = new()
-        {
-            DifficultLevel = getListByEnumTypeHeroDto.EnumType,
-            PageRequest = getListByEnumTypeHeroDto.PageRequest
-        };
+    //[HttpGet("GetListByDifficultLevel")]
+    //public async Task<IActionResult> GetListByDifficultLevel([FromQuery] GetListByEnumTypeHeroDto<DifficultLevel> getListByEnumTypeHeroDto)
+    //{
+    //    GetListByDifficultLevelQueryRequest request = new()
+    //    {
+    //        DifficultLevel = getListByEnumTypeHeroDto.EnumType,
+    //        PageRequest = getListByEnumTypeHeroDto.PageRequest
+    //    };
 
-        GetListResponse<HeroListModel> result = await Mediator.Send(request);
-        return Ok(result);
-    }
+    //    GetListResponse<HeroListModel> result = await Mediator.Send(request);
+    //    return Ok(result);
+    //}
 
     [HttpGet("GetListByActive")]
     public async Task<IActionResult> GetActiveListHero([FromQuery] PageRequest pageRequest)
@@ -149,18 +145,18 @@ public class HeroController : BaseController
         return Ok(result);
     }
 
-    [HttpGet("GetListByAbilityId")]
-    public async Task<IActionResult> GetByStatus([FromQuery] GetListByIdHeroDto<Guid> getListByIdHeroDto)
-    {
-        GetListByAbilityIdHeroQueryRequest request = new()
-        {
-            AbilityId = getListByIdHeroDto.Id,
-            PageRequest = getListByIdHeroDto.PageRequest
-        };
+    //[HttpGet("GetListByAbilityId")]
+    //public async Task<IActionResult> GetByStatus([FromQuery] GetListByIdHeroDto<Guid> getListByIdHeroDto)
+    //{
+    //    GetListByAbilityIdHeroQueryRequest request = new()
+    //    {
+    //        AbilityId = getListByIdHeroDto.Id,
+    //        PageRequest = getListByIdHeroDto.PageRequest
+    //    };
 
-        GetListResponse<GetListByAbilityIdHeroQueryResponse> result = await Mediator.Send(request);
-        return Ok(result);
-    }
+    //    GetListResponse<GetListByAbilityIdHeroQueryResponse> result = await Mediator.Send(request);
+    //    return Ok(result);
+    //}
 
     [HttpGet("GetListAllHeros")]
     public async Task<IActionResult> GetListHero([FromQuery] PageRequest pageRequest)

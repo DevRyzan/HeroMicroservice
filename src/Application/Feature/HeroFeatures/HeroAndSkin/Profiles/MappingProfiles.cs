@@ -12,22 +12,22 @@ using AutoMapper;
 
 namespace Application.Feature.HeroFeatures.HeroAndSkin.Profiles;
 
-public class MappingProfiles : Profile
-{
-    public MappingProfiles()
-    {
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, ChangeStatusHeroAndSkinCommandResponse>().ReverseMap();
+//public class MappingProfiles : Profile
+//{
+//    public MappingProfiles()
+//    {
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, ChangeStatusHeroAndSkinCommandResponse>().ReverseMap();
 
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, CreateStatusHeroAndSkinDto>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, CreateHeroAndSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, CreateStatusHeroAndSkinDto>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, CreateHeroAndSkinCommandResponse>().ReverseMap();
 
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, DeleteHeroAndSkinCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, RemoveHeroAndSkinCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, UndoDeleteHeroAndSkinCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, UpdateHeroAndSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, DeleteHeroAndSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, RemoveHeroAndSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, UndoDeleteHeroAndSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, UpdateHeroAndSkinCommandResponse>().ReverseMap();
 
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, GetByIdHeroAndSkinCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, GetListByActiveHeroAndSkinCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.HeroAndSkin, GetListByInActiveHeroAndSkinCommandResponse>().ReverseMap();
-    }
-}
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, GetByIdHeroAndSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, GetListByActiveHeroAndSkinCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.HeroAndSkin, GetListByInActiveHeroAndSkinCommandResponse>().ReverseMap();
+//    }
+//}

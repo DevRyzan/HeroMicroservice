@@ -7,7 +7,7 @@ using Microsoft.Extensions.Options;
 
 namespace Persistence.Repositories.HeroRepositories;
 
-public class HeroRepository : MongoDbRepositoryBase<Hero, Guid>, IHeroRepository
+public class HeroRepository : MongoDbRepositoryBase<Hero, string>, IHeroRepository
 {
     public HeroRepository(IOptions<MongoDbSettings> options) : base(options)
     {

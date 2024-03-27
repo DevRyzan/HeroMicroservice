@@ -1,4 +1,4 @@
-﻿using Application.Feature.HeroFeatures.HeroStats.Commands.ChangeStatus;
+using Application.Feature.HeroFeatures.HeroStats.Commands.ChangeStatus;
 using Application.Feature.HeroFeatures.HeroStats.Commands.Create;
 using Application.Feature.HeroFeatures.HeroStats.Commands.Delete;
 using Application.Feature.HeroFeatures.HeroStats.Commands.Remove;
@@ -13,27 +13,30 @@ using Domain.Entities.Heros;
 
 namespace Application.Feature.HeroFeatures.HeroStats.Profiles;
 
-public class MappingProfiles : Profile
-{
-    public MappingProfiles()
-    {
-        CreateMap<HeroStat, CreateHeroStatDto>().ReverseMap();
-        CreateMap<HeroStat, CreateHeroStatCommandResponse>().ReverseMap();
+//public class MappingProfiles : Profile
+//{
+//    public MappingProfiles()
+//    {
+//        CreateMap<HeroStat, CreateHeroStatDto>().ReverseMap();
+//        CreateMap<HeroStat, CreateHeroStatCommandResponse>().ReverseMap();
 
-        CreateMap<HeroStat, DeleteHeroStatDto>().ReverseMap();
-        CreateMap<HeroStat, DeleteHeroStatCommandResponse>().ReverseMap();
+//        CreateMap<HeroStat, DeleteHeroStatDto>().ReverseMap();
+//        CreateMap<HeroStat, DeleteHeroStatCommandResponse>().ReverseMap();
 
-        CreateMap<HeroStat, UpdateHeroStatDto>().ReverseMap();
-        CreateMap<HeroStat, UpdateHeroStatCommandResponse>().ReverseMap();
+//        CreateMap<HeroStat, UpdateHeroStatDto>().ReverseMap();
+//        CreateMap<HeroStat, UpdateHeroStatCommandResponse>().ReverseMap();
 
-        CreateMap<HeroStat, RemoveHeroStatDto>().ReverseMap();
-        CreateMap<HeroStat, RemoveHeroStatCommandResponse>().ReverseMap();
+//        CreateMap<HeroStat, RemoveHeroStatDto>().ReverseMap();
+//        CreateMap<HeroStat, RemoveHeroStatCommandResponse>().ReverseMap();
 
-        CreateMap<HeroStat, ChangeStatusHeroStatDto>().ReverseMap();
-        CreateMap<HeroStat, ChangeStatusHeroStatCommandResponse>().ReverseMap();
+//        CreateMap<HeroStat, ChangeStatusHeroStatDto>().ReverseMap();
+//        CreateMap<HeroStat, ChangeStatusHeroStatCommandResponse>().ReverseMap();
 
-        CreateMap<IList<HeroStat>, HeroStatListModel>().ReverseMap();
-        CreateMap<HeroStat, HeroStatListDto>().ReverseMap();
+//        CreateMap<IList<HeroStat>, HeroStatListModel>().ReverseMap();
+//        CreateMap<HeroStat, HeroStatListDto>().ReverseMap();
+
+//        CreateMap<HeroStat, GetListByInActiveHeroStatQueryResponse>().ReverseMap();
+//        CreateMap<List<HeroStat>, List<GetListByInActiveHeroStatQueryResponse>>().ReverseMap();
 
         CreateMap<HeroStat, GetListByInActiveHeroStatQueryResponse>().ReverseMap();
 
@@ -41,5 +44,6 @@ public class MappingProfiles : Profile
 
 
 
-    }
-}
+
+//    }
+//}

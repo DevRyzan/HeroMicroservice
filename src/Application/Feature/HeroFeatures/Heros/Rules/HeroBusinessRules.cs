@@ -28,21 +28,21 @@ public class HeroBusinessRules : BaseBusinessRules
         if (hero == null) throw new BusinessException(HeroMessages.HeroDoesNotExist);
         return Task.CompletedTask;
     }
-    public virtual Task HeroDetailShouldBeExist(HeroDetail? heroDetail)
-    {
-        if (heroDetail == null) throw new BusinessException(HeroMessages.HeroDetailDoesNotExist);
-        return Task.CompletedTask;
-    }
-    public virtual Task HeroStatShouldBeExist(HeroStat? heroStat)
-    {
-        if (heroStat == null) throw new BusinessException(HeroMessages.HeroStatDoesNotExist);
-        return Task.CompletedTask;
-    }
-    public virtual async Task HeroShouldBeExistsWhenSlecetedHeroType(HeroType heroType)
-    {
-        Hero? hero = await _heroRepository.GetAsync(a => a.HeroType == heroType);
-        if (hero == null) throw new BusinessException(HeroMessages.HeroDoesNotExist);
-    }
+    //public virtual Task HeroDetailShouldBeExist(HeroDetail? heroDetail)
+    //{
+    //    if (heroDetail == null) throw new BusinessException(HeroMessages.HeroDetailDoesNotExist);
+    //    return Task.CompletedTask;
+    //}
+    //public virtual Task HeroStatShouldBeExist(HeroStat? heroStat)
+    //{
+    //    if (heroStat == null) throw new BusinessException(HeroMessages.HeroStatDoesNotExist);
+    //    return Task.CompletedTask;
+    //}
+    //public virtual async Task HeroShouldBeExistsWhenSlecetedHeroType(HeroType heroType)
+    //{
+    //    Hero? hero = await _heroRepository.GetAsync(a => a.HeroType == heroType);
+    //    if (hero == null) throw new BusinessException(HeroMessages.HeroDoesNotExist);
+    //}
     public virtual async Task HeroShouldBeExistsWhenSelectedStatus(bool status)
     {
         Hero? hero = await _heroRepository.GetAsync(a => a.Status == status);
@@ -53,12 +53,12 @@ public class HeroBusinessRules : BaseBusinessRules
         Hero? hero = await _heroRepository.GetAsync(a => a.Name == name);
         if (hero != null) throw new BusinessException(HeroMessages.HeroNameAlreadyExists);
     }
-    public virtual async Task HeroNameShouldNotBeExistWithId(string name, Guid id)
+    public virtual async Task HeroNameShouldNotBeExistWithId(string name, string id)
     {
         Hero? hero = await _heroRepository.GetAsync(a => a.Name == name && a.Id != id);
         if (hero != null) throw new BusinessException(HeroMessages.HeroNameAlreadyExists);
     }
-    public virtual async Task HeroIdShouldBeExist(Guid? id)
+    public virtual async Task HeroIdShouldBeExist(string? id)
     {
         Hero? hero = await _heroRepository.GetAsync(a => a.Id == id);
         if (hero == null) throw new BusinessException(HeroMessages.HeroDoesNotExist);
