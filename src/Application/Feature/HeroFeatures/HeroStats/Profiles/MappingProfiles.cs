@@ -1,4 +1,4 @@
-﻿using Application.Feature.HeroFeatures.HeroStats.Commands.ChangeStatus;
+using Application.Feature.HeroFeatures.HeroStats.Commands.ChangeStatus;
 using Application.Feature.HeroFeatures.HeroStats.Commands.Create;
 using Application.Feature.HeroFeatures.HeroStats.Commands.Delete;
 using Application.Feature.HeroFeatures.HeroStats.Commands.Remove;
@@ -37,6 +37,10 @@ namespace Application.Feature.HeroFeatures.HeroStats.Profiles;
 
 //        CreateMap<HeroStat, GetListByInActiveHeroStatQueryResponse>().ReverseMap();
 //        CreateMap<List<HeroStat>, List<GetListByInActiveHeroStatQueryResponse>>().ReverseMap();
+
+        CreateMap<HeroStat, GetListByInActiveHeroStatQueryResponse>().ReverseMap();
+
+
 
 
 
