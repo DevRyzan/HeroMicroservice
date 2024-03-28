@@ -38,7 +38,7 @@ namespace Application.Feature.HeroFeatures.HeroStats.Profiles;
 //        CreateMap<HeroStat, GetListByInActiveHeroStatQueryResponse>().ReverseMap();
 //        CreateMap<List<HeroStat>, List<GetListByInActiveHeroStatQueryResponse>>().ReverseMap();
 
-        CreateMap<HeroStat, GetListByInActiveHeroStatQueryResponse>().ReverseMap();
+        //CreateMap<HeroStat, GetListByInActiveHeroStatQueryResponse>().ReverseMap();
 
 
 

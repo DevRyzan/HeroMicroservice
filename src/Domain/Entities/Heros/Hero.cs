@@ -72,23 +72,22 @@ namespace Domain.Entities.Heros;
 
 //}
 
-
 // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
 public class Hero : Entity<string>
 {
     public string Name { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
-    public List<Role> Role { get; set; }
+    public List<Role>? Roles { get; set; }
     public int HealthPoint { get; set; }
     public double HealthRegeneration { get; set; }
     public int ManaPoint { get; set; }
     public double ManaRegeneration { get; set; }
     public int MoveSpeed { get; set; }
     public double AttackTime { get; set; }
-    public double CriticalChance { get; set; }
-    public double CriticalDamageMod { get; set; }
-    public double EvadeChance { get; set; }
-    public List<Ability> Ability { get; set; }
-    public List<ItemSet> ItemSet { get; set; }
+    public double? CriticalChance { get; set; }
+    public double? CriticalDamageMod { get; set; }
+    public double? EvadeChance { get; set; }
+    public List<Ability> Abilities { get; set; }
+    public List<ItemSet>? ItemSets { get; set; }
 }
