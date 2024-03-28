@@ -1,9 +1,8 @@
-﻿using Core.Persistence.Repositories;
+﻿using Domain.Entities.Items;
 
+namespace Application.Feature.HeroFeatures.Heros.Dtos;
 
-namespace Domain.Entities.Items;
-
-public class ItemSet : Entity<string>
+public class CreateItemSetDto
 {
     public string SetType { get; set; }
     public string Name { get; set; }
@@ -12,6 +11,6 @@ public class ItemSet : Entity<string>
     public string Rarity { get; set; }
     public int Cost { get; set; }
     public int Resell { get; set; }
-    public List<UniqueItem> UniqueItems { get; set; }
-    public List<SetBonus> SetBonuses { get; set; }
+    public List<CreateUniqueItemDto> UniqueItems { get; set; }
+    public List<CreateSetBonusDto> SetBonuses { get; set; }
 }

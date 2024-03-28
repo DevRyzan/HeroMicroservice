@@ -55,14 +55,10 @@ public static class ApplicationServiceRegistration
         services.AddScoped<IAbilityService, AbilityManager>();
         services.AddScoped<IEffectService, EffectManager>();
         services.AddScoped<IHeroService, HeroManager>();
-
         services.AddScoped<IRoleService, RoleManager>();
         services.AddScoped<IItemSetService, ItemSetManager>();
         services.AddScoped<ISetBonusService, SetBonusManager>();
         services.AddScoped<IUniqueItemService, UniqueItemManager>();
-        services.AddScoped<IHeroStatService, HeroStatManager>();
-        services.AddScoped<IHeroStoryService, HeroStoryManager>();
-        services.AddScoped<IBardAndHeroService, BardAndHeroManager>();
 
 
         return services;

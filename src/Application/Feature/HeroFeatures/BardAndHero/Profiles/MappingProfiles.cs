@@ -12,22 +12,22 @@ using AutoMapper;
 
 namespace Application.Feature.HeroFeatures.BardAndHero.Profiles;
 
-public class MappingProfiles : Profile
-{
-    public MappingProfiles()
-    {
-        CreateMap<Domain.Entities.Heros.BardAndHero, ChangeStatusBardAndHeroCommandResponse>().ReverseMap();
+//public class MappingProfiles : Profile
+//{
+//    public MappingProfiles()
+//    {
+//        CreateMap<Domain.Entities.Heros.BardAndHero, ChangeStatusBardAndHeroCommandResponse>().ReverseMap();
 
-        CreateMap<Domain.Entities.Heros.BardAndHero, CreateBardAndHeroDto>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.BardAndHero, CreateBardAndHeroCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.BardAndHero, CreateBardAndHeroDto>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.BardAndHero, CreateBardAndHeroCommandResponse>().ReverseMap();
 
-        CreateMap<Domain.Entities.Heros.BardAndHero, DeleteBardAndHeroCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.BardAndHero, RemoveBardAndHeroCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.BardAndHero, UndoDeleteBardAndHeroCommandResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.BardAndHero, UpdateBardAndHeroCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.BardAndHero, DeleteBardAndHeroCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.BardAndHero, RemoveBardAndHeroCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.BardAndHero, UndoDeleteBardAndHeroCommandResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.BardAndHero, UpdateBardAndHeroCommandResponse>().ReverseMap();
 
-        CreateMap<Domain.Entities.Heros.BardAndHero, GetByIdBardAndHeroQueryResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.BardAndHero, GetListByActiveBardAndHeroQueryResponse>().ReverseMap();
-        CreateMap<Domain.Entities.Heros.BardAndHero, GetListByInActiveBardAndHeroQueryResponse>().ReverseMap();
-    }
-}
+//        CreateMap<Domain.Entities.Heros.BardAndHero, GetByIdBardAndHeroQueryResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.BardAndHero, GetListByActiveBardAndHeroQueryResponse>().ReverseMap();
+//        CreateMap<Domain.Entities.Heros.BardAndHero, GetListByInActiveBardAndHeroQueryResponse>().ReverseMap();
+//    }
+//}
